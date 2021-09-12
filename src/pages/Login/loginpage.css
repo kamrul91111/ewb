@@ -1,0 +1,8 @@
+h3 {
+    color: white;
+}
+.lottieContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
