@@ -83,14 +83,15 @@ const LoginPage = () => {
   return (
     <div clasName="container">
       <Grid container spacing={3} className={classes.grid}>
-        <Grid item xs={6} style={{marginTop: 150}}>
+        {/* small device full, beyond that half */}
+        <Grid item xs={11} sm={6} style={{marginTop: 150}}>
           <Paper elevation={3} className={classes.paper}>
             {/* if loading, show lottie, else display form */}
             {loading === false ? (
               <>
                 <img src={Logo} style={{width: 200, alignSelf: "center"}} />
                 <form className={classes.root} noValidate autoComplete="off">
-                  <h3>Login</h3>
+                  <h4>Login</h4>
                   <div style={{flexDirection: "column", display: "flex"}}>
                     <TextField
                       id="1"
