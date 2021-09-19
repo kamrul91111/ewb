@@ -16,9 +16,9 @@ code {
 
 /* for the label */
 .MuiFormLabel-root.Mui-focused {
-  color: white !important;
+  color: #02B8FC !important;
 }
 /* for outline */
 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-  border-color: white !important;
+  border-color: #02B8FC !important;
 }

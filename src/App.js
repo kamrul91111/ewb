@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import './App.css'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; //for toastify
 
-// import default style
-import "rsuite/lib/styles/index.less"; // or
 //nav
 import TopBarComponent from './components/TopBar/TopBarComponent';
 
@@ -44,6 +44,7 @@ const App = () => {
           {token === null ? <LoginPage /> : <DataObservationPage />}
         </Route>
       </Switch>
+      <ToastContainer />
     </Router>
   );
 };
