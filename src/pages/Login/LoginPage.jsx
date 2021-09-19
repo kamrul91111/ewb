@@ -5,7 +5,6 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import firebase from "../../api/fire.js";
 import Grow from "@material-ui/core/Grow";
 import {toast} from "react-toastify";
 //lottie

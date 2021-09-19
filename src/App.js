@@ -1,19 +1,16 @@
 import React, {useEffect, useState} from "react";
-import './App.css'
+import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; //for toastify
+import {ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; //for toastify
 
 //nav
-import TopBarComponent from './components/TopBar/TopBarComponent';
-
+import TopBarComponent from "./components/TopBar/TopBarComponent";
 
 //pages
-import LoginPage from './pages/Login/LoginPage';
-import DataCollectionPage from './pages/DataCollection/DataCollectionPage';
-import DataObservationPage from './pages/DataObservation/DataObservationPage';
-
-
+import LoginPage from "./pages/Login/LoginPage";
+import DataCollectionPage from "./pages/DataCollection/DataCollectionPage";
+import DataObservationPage from "./pages/DataObservation/DataObservationPage";
 
 const App = () => {
   const [token, setToken] = useState(null); //store logged in token
@@ -35,13 +32,10 @@ const App = () => {
       <Switch>
         {/* Home page, exact */}
         <Route path="/" exact>
-          <LoginPage />
+          {token === null ? <LoginPage /> : <DataObservationPage />}
         </Route>
         <Route path="/collection">
           {token === null ? <LoginPage /> : <DataCollectionPage />}
-        </Route>
-        <Route path="/observation">
-          {token === null ? <LoginPage /> : <DataObservationPage />}
         </Route>
       </Switch>
       <ToastContainer />
